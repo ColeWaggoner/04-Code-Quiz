@@ -1,50 +1,31 @@
 var quiz = [
   {
-      title: 'What is the element called that can continue to execute a block of code as long as the specified condition remains true?',
-      choices: [
-          'Loop', 
-         'Debugger', 
-          'Clone', 
-          'Repeater', 
-      ],
-      answer: 'Loop'
+    title:
+      "Which of the following JavaScript statements can be used to declare a variable?",
+    choices: ["var", "let", "const", "All of the Above"],
+    answer: "All of the Above",
   },
   {
-      title: 'What is the type of loop that continues through a block of code as long as the specified condition remains true?',
-      choices: [
-         'While loop', 
-         'Else loop',
-         'For loop', 
-         'Conditional loop', 
-      ],
-      answer: 'While loop'
+    title:
+      "Which JavaScript method is used to add an element to the end of an array?",
+    choices: ["push()", "pop()", "shift()", "unshift()"],
+    answer: "push()",
   },
   {
-      title: 'In JavaScript, what element is used to store multiple values in a single varible?',
-      choices: [
-         'Arrays', 
-         'Variables', 
-         'Functions', 
-         'Strings', 
-      ],
-      answer: 'Arrays'
+    title:
+      "Which of the following is a built-in function in JavaScript that is used to print a message to the console?",
+    choices: ["alert()", "confirm()", "console.log()", "prompt()"],
+    answer: "console.log()",
   },
   {
-      title: 'This is what you call the guide that defines coding conventions for all projects.',
-      choices: [
-         'Style guide', 
-         'Developers reference',
-         'Coding dictionary', 
-         'Main textbook', 
-      ],
-      answer: 'Style guide'
-  },
-  {
-    title: 'This is what you call the guide that defines coding conventions for all projects.',
+    title:
+      "What does the acronym DOM stand for in JavaScript?",
     choices: [
-       'True', 
-       'False',
+      "Data Object Model",
+      "Direct Object Model",
+      "Dynamic Object Model",
+      "Document Object Model",
     ],
-    answer: 'True'
-}
+    answer: "Document Object Model",
+  },
 ];
