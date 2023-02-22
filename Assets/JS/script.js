@@ -69,13 +69,32 @@ function answerAttempt(event) {
 function endQuiz() {
   clearInterval(timer);
   if (time <= 0) {
-    document.getElementById("reply").textContent = ("Out of Time!");}
-    else{document.getElementById("reply").textContent = "Well Done!"};
+    document.getElementById("reply").textContent = "Out of Time!";
+  } else {
+    document.getElementById("reply").textContent = "Well Done!";
+  }
   document.getElementById("final").className = "show";
   document.getElementById("finalScore").textContent = time;
   document.getElementById("quiz").className = "hidden";
   document.getElementById("help").className = "hidden";
 }
 
+function setLeaderboard() {
+  var name = document.getElementById("name").value;
+  var finalScore = { name: name, score: time };
+  var leaderboard = [];
+  
+  if (localStorage.getItem("leaderboard")) {
+    leaderboard = JSON.parse(localStorage.getItem("leaderboard"));
+  }
+
+  leaderboard.push(finalScore);
+  
+  localStorage.setItem("leaderboard", JSON.stringify(leaderboard));
+
+  document.location.href = "./leaderboard.html";
+}
+
 document.querySelector("#start").addEventListener("click", quizStart);
 document.querySelector("#answers").addEventListener("click", answerAttempt);
+document.querySelector("#submit").addEventListener("click", setLeaderboard);

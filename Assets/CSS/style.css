@@ -129,6 +129,19 @@ main h1 {
   box-shadow: #2e2e2e 0px 0px 8px;
 }
 
+.scores {
+  width: 30%;
+  font-size: 1rem;
+}
+
+.scoresDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 20px;
+}
+
 .show {
   display: contents;
 }
