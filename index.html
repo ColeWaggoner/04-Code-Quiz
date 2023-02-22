@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="./Assets/CSS/reset.css" />
     <link rel="stylesheet" href="./Assets/CSS/style.css" />
   </head>
 
@@ -13,29 +12,34 @@
     <header>
       <a class="highscore headerEle" href="./highscores.html">Highscores</a>
 
-      <span id="timeText" class="timer headerEle"> Time: <span id="secs">60</span> </span>
+      <span id="timeText" class="timer headerEle">
+        Time: <span id="secs">60</span>
+      </span>
     </header>
     <main>
       <div id="start" class="start">
         <h1>Coding Quiz</h1>
 
         <p class="intro">
-          Welcome! This is a timed quiz on various coding topics! You will have 60 seconds to 
-          complete the quiz. Each wrong answer will deduct 5 seconds. The final time will be your score.
-          When you are ready, click the start button to begin.
+          Welcome! This is a timed quiz on various coding topics! You will have
+          60 seconds to complete the quiz. Each wrong answer will deduct 5
+          seconds. The final time will be your score. When you are ready, click
+          the start button to begin.
         </p>
 
-        <button id="start-button" class="start-button">Start</button>
+        <button id="start" class="start-button">Start</button>
       </div>
 
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
+      <div id="quiz" class="hidden quiz">
+        <div class="test">
+        <h2 id="question"></h2>
+        <div id="answers" class="answers"></div>
+        </div>
       </div>
 
-      <div id="end-screen" class="hide">
+      <div id="final-screen" class="hidden">
         <h2>All done</h2>
-        <p>Your final score is <span id="final-score">00</span>,</p>
+        <p>Final Score:<span id="final"></span>,</p>
         <p>Enter initials: <input type="text" id="initials" maxlength="3" /></p>
         <button id="submit">Submit</button>
       </div>

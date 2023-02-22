@@ -39,11 +39,11 @@ main {
   padding: 20px;
 }
 
-.hide {
+.hidden {
   display: none;
 }
 
-.start {
+.start{
   text-align: center;
   padding: 15px;
   background-color: rgb(236, 235, 235);
@@ -52,7 +52,19 @@ main {
   border-width: 2px;
   border-radius: 32px;
   height: 500px;
-  box-shadow: #2e2e2e 8px 8px 8px;
+  box-shadow: #2e2e2e 4px 4px 8px;
+}
+
+.test {
+  text-align: center;
+  padding: 15px;
+  background-color: rgb(236, 235, 235);
+  width: 60%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 32px;
+  height: auto;
+  box-shadow: #2e2e2e 4px 4px 8px;
 }
 
 main h1 {
@@ -79,6 +91,42 @@ main h1 {
   border: none;
   margin: 20px;
   cursor: pointer;
+}
+
+.start-button:hover {
+  background-color: rgb(46, 107, 126);
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: #2e2e2e 0px 0px 8px;
+}
+
+#options {
+  background-color: rgb(46, 107, 126);
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+}
+
+#options:hover {
+  background-color: rgb(46, 107, 126);
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  margin: 20px;
+  cursor: pointer;
+  box-shadow: #2e2e2e 0px 0px 8px;
 }
 
 .show {
