@@ -8,7 +8,19 @@ function quizStart(event) {
   document.getElementById("help").className = "hidden";
   document.getElementById("quiz").className = "show";
   getQuiz();
-  // timerStart();
+  timerStart();
+}
+
+function timerStart() {
+  // update time
+  timer = setInterval(function () {
+    time--;
+    document.getElementById("secs").textContent = time;
+    if (time <= 0) {
+      clearInterval(timer);
+      endQuiz();
+    }
+  }, 1000);
 }
 
 function getQuiz() {
@@ -36,7 +48,7 @@ function answerAttempt(event) {
       } else {
         time -= time;
         document.getElementById("secs").textContent = time;
-        quizEnd();
+        endQuiz();
       }
       document.getElementById("help").textContent = "Try Again!";
       document.getElementById("help").className = "show";
@@ -46,12 +58,23 @@ function answerAttempt(event) {
       document.getElementById("help").className = "show";
       questionNum++;
       if (questionNum > 3) {
-        quizEnd();
+        endQuiz();
       } else {
         getQuiz();
       }
     }
   }
+}
+
+function endQuiz() {
+  clearInterval(timer);
+  if (time <= 0) {
+    document.getElementById("reply").textContent = ("Out of Time!");}
+    else{document.getElementById("reply").textContent = "Well Done!"};
+  document.getElementById("final").className = "show";
+  document.getElementById("finalScore").textContent = time;
+  document.getElementById("quiz").className = "hidden";
+  document.getElementById("help").className = "hidden";
 }
 
 document.querySelector("#start").addEventListener("click", quizStart);
